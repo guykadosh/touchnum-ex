@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/utils.js"></script>
+    <script defer src="js/main.js"></script>
+    <title>Touch Nums</title>
+  </head>
+  <body onload="init()">
+    <div class="page">
+      <header>
+        <h1>Touch Nums 🔢</h1>
+        <div class="new-game">
+          <button class="new-game-btn" onclick="resetGame()">New Game</button>
+        </div>
+        <div class="box">
+          <h2>Pick Difficulty</h2>
+          <form>
+            <input
+              onclick="changeBoard(this)"
+              type="radio"
+              value="16"
+              name="board-size"
+              checked="checked"
+            />
+            <label>16</label>
+            <input
+              onclick="changeBoard(this)"
+              name="board-size"
+              type="radio"
+              value="25"
+            />
+            <label>25</label>
+            <input
+              onclick="changeBoard(this)"
+              name="board-size"
+              type="radio"
+              value="36"
+            />
+            <label>36</label>
+          </form>
+        </div>
+
+        <div class="box">
+          <h2>Game Time:</h2>
+          <p class="timer">00</p>
+        </div>
+        <div class="box">
+          <h2>Next Number:</h2>
+          <p class="next-number">00</p>
+        </div>
+      </header>
+
+      <div class="table-container">
+        <table>
+          <tbody class="nums-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
